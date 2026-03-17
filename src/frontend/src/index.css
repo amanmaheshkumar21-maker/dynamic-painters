@@ -1,0 +1,70 @@
+@font-face {
+  font-family: "Plus Jakarta Sans";
+  src: url("/assets/fonts/PlusJakartaSans.woff2") format("woff2");
+  font-weight: 300 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Bricolage Grotesque";
+  src: url("/assets/fonts/BricolageGrotesque.woff2") format("woff2");
+  font-weight: 200 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0.98 0.003 240;
+    --foreground: 0.18 0.04 252;
+    --card: 1 0 0;
+    --card-foreground: 0.18 0.04 252;
+    --popover: 1 0 0;
+    --popover-foreground: 0.18 0.04 252;
+    --primary: 0.25 0.09 252;
+    --primary-foreground: 1 0 0;
+    --secondary: 0.93 0.02 252;
+    --secondary-foreground: 0.25 0.09 252;
+    --muted: 0.95 0.01 240;
+    --muted-foreground: 0.5 0.04 252;
+    --accent: 0.72 0.19 142;
+    --accent-foreground: 1 0 0;
+    --destructive: 0.55 0.22 27;
+    --destructive-foreground: 1 0 0;
+    --border: 0.88 0.02 252;
+    --input: 0.88 0.02 252;
+    --ring: 0.72 0.19 142;
+    --radius: 0.5rem;
+    --navy: 0.25 0.09 252;
+    --navy-dark: 0.18 0.08 252;
+    --navy-light: 0.35 0.08 252;
+    --green: 0.72 0.19 142;
+    --green-dark: 0.62 0.18 142;
+    --green-light: 0.82 0.16 142;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground font-body;
+    -webkit-font-smoothing: antialiased;
+  }
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply font-display;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
